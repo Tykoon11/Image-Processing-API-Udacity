@@ -15,7 +15,7 @@ The width and height set in the URL above will determine the size of the image t
 // npm run lint
 You will also see any lint errors in the console.
 
-// npmm run prettier
+// npm run prettier
 Prettier is the preffered for code formatting in this project
 
 // npm run test
