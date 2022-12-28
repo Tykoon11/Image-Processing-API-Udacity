@@ -14,11 +14,11 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const index_1 = __importDefault(require("../index"));
 const supertest_1 = __importDefault(require("supertest"));
-// import routes from "../routes";
 const request = (0, supertest_1.default)(index_1.default);
 describe("Test endpoint response", () => {
     it("gets the api endpoints", () => __awaiter(void 0, void 0, void 0, function* () {
         const response = yield request.get("/api/images");
+        console.log(response.status);
         expect(response.status).toBe(200);
     }));
 });

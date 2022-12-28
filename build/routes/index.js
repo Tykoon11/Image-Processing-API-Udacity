@@ -16,7 +16,7 @@ const express_1 = __importDefault(require("express"));
 const resize_1 = __importDefault(require("../utilities/resize"));
 //Routing with request queries
 const routes = express_1.default.Router();
-//localhost:3000/api/images?filename=icelandwaterfall&width=600&height=600
+//localhost:3001/api/images?filename=icelandwaterfall&width=600&height=600
 routes.get("/", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         console.log(req.query);
@@ -24,8 +24,12 @@ routes.get("/", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
         const width = Number(req.query.width);
         const height = Number(req.query.height);
         const photo = yield (0, resize_1.default)(filename, width, height);
-        resolve: res.sendFile(photo);
+        console.log("Rendering file");
+        res.sendFile(photo);
     }
-    catch (_a) { }
+    catch (_a) {
+        console.log("Unable to Resize - Please check URL filename, height and width values!!");
+        res.send("Unable to Resize - Please check URL filename, height and width values!!");
+    }
 }));
 exports.default = routes;

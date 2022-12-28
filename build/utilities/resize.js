@@ -35,7 +35,9 @@ const resize = (filename, width, height) => __awaiter(void 0, void 0, void 0, fu
         }
     }
     catch (_a) {
-        return "error";
+        ;
+        ("error creating path");
+        console.log("error creating path");
     }
 });
 exports.default = resize;
