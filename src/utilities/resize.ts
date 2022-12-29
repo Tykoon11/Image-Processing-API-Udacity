@@ -7,12 +7,14 @@ const resize = async (filename: string, width: number, height: number) => {
   try {
     const inputImage = path.resolve(
       __dirname,
-      `../assets/images/${filename}.jpg`
+      `../../assets/images/${filename}.jpg`
     )
     const outputImage = path.resolve(
       __dirname,
-      `../assets/cropped/${filename}x${width}x${height}.jpg`
+      `../../assets/cropped/${filename}x${width}x${height}.jpg`
     )
+    console.log(inputImage)
+    console.log(outputImage)
 
     //Cache block (conditional statement) for better performance and optimization
     if (await fs.existsSync(outputImage)) {
@@ -24,12 +26,13 @@ const resize = async (filename: string, width: number, height: number) => {
         .resize({ height: height, width: width })
         .toFormat("jpeg")
         .toFile(outputImage)
-
+      console.log(outputImage)
       return outputImage
     }
   } catch {
-    ;("error creating path")
+    // ;("error creating path")
     console.log("error creating path")
+    return null
   }
 }
 
