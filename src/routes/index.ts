@@ -6,15 +6,15 @@ const routes = express.Router()
 
 //localhost:3001/api/images?filename=icelandwaterfall&width=600&height=600
 
-routes.get(
+routes.post(
   "/",
   async (req: express.Request, res: express.Response): Promise<void> => {
     try {
-      console.log(req.query)
+      console.log(req.body)
 
-      const filename = req.query.filename
-      const width = Number(req.query.width)
-      const height = Number(req.query.height)
+      const filename = req.body.filename
+      const width = Number(req.body.width)
+      const height = Number(req.body.height)
 
       const photo = await resize(filename as string, width, height)
       console.log("Rendering file")
