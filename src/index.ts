@@ -1,7 +1,7 @@
 // Creating a Server
 import express from "express"
 import routes from "./routes/index"
-const app = express()
+const app: express.Application = express()
 const port = 3004
 
 // Visit http://localhost:3004/form
