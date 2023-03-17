@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": " nodemon src/index.ts",
+    "start": " nodemon src/index.ts ",
+    "watch": "npx tailwindcss -i ./src/input.css -o ./assets/output.css --watch",
+    "main": "npm run watch && npm start",
     "lint": "eslint . --ext .ts",
     "prettier": "prettier --config .prettierrc './src/**/*.ts' --write",
     "build": "npx tsc",
@@ -27,6 +29,7 @@
     "@types/supertest": "^2.0.12",
     "@typescript-eslint/eslint-plugin": "^5.47.1",
     "@typescript-eslint/parser": "^5.47.1",
+    "autoprefixer": "^10.4.14",
     "eslint": "^8.29.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
@@ -34,8 +37,10 @@
     "jasmine-spec-reporter": "^7.0.0",
     "node-cache": "^5.1.2",
     "nodemon": "^2.0.20",
+    "postcss": "^8.4.21",
     "prettier": "^2.8.1",
     "supertest": "^6.3.3",
+    "tailwindcss": "^3.2.7",
     "ts-node": "^10.9.1",
     "typescript": "^4.9.4"
   }

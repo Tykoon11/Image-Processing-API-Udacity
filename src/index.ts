@@ -15,7 +15,7 @@ app.use(express.urlencoded()) // for post
 app.use("/api/images", routes)
 
 app.listen(port, () => {
-  console.log("listening on port")
+  console.log(`listening on ${port}`)
 })
 
 export default app
