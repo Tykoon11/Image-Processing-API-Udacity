@@ -12,7 +12,8 @@
       class="max-h-[100vh] min-h-[80vh] min-w-[80vw] bg-white my-[10vh] mx-[10vw] rounded-3xl border-2 border-white px-5"
     >
       <div class="mt-[150px] mb-7">
-        <div class="text-center text-xl font-bold text-[#2E67CD] mb-2">
+        <hr />
+        <div class="text-center text-xl font-bold text-[#2E67CD] mt-2 mb-2">
           <h2>Hello, Let's Begin!</h2>
         </div>
 
@@ -24,14 +25,20 @@
       </div>
 
       <div>
-        <div class="bg-red-200 py-6">
+        <div class="bg-slate-200 rounded-xl py-6 mb-7">
           <form
             action="/api/images"
             method="post"
             enctype="multipart/form-data"
           >
             <div class="flex justify-center px-10">
-              <input type="file" id="file" name="photo" accept="image/*" />
+              <input
+                class="text-sm"
+                type="file"
+                id="file"
+                name="photo"
+                accept="image/*"
+              />
               <!-- <label for="file">Upload</label> -->
             </div>
             <div class="flex justify-center mt-6">
@@ -44,7 +51,7 @@
             </div>
             <div class="flex justify-center mt-10">
               <button
-                class="bg-[#2E67CD] px-20 py-2 text-slate-100 rounded-md text-sm"
+                class="bg-[#2E67CD] px-20 py-2 text-slate-100 rounded-md text-sm hover:bg-orange-500"
                 type="submit"
                 class=""
               >
@@ -53,14 +60,8 @@
             </div>
           </form>
         </div>
+        <hr />
       </div>
     </div>
   </body>
 </html>
-
-<!-- enctype="application/x-www-form-urlencoded" -->
-
-<!-- <div>
-          <label for="name">FileName</label>
-          <input id="name" name="filename" type="text" />
-            </div> -->
