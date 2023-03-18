@@ -9,41 +9,52 @@
   </head>
   <body class="bg-gradient-to-r from-[#00e4ad] to-blue-500">
     <div
-      class="min-h-[80vh] min-w-[80vw] bg-[#2E67CD] my-[10vh] mx-[10vw] rounded-3xl border-2 border-white flex items-center justify-center"
+      class="max-h-[100vh] min-h-[80vh] min-w-[80vw] bg-[#2E67CD] my-[10vh] mx-[10vw] rounded-3xl border-2 border-white"
     >
-      <div class="absolute z-100 w-[50px] top-28 left-20">
-        <img src="./logo1.png" alt="" />
+      <div class="p-4">
+        <div class="w-[50px]">
+          <img src="./logo1.png" alt="" />
+        </div>
       </div>
-      <div>
-        <div
-          class="w-[170px] -rotate-6 rounded-xl overflow-hidden relative top-[140px] -left-[90px] border-4 border-white"
-        >
-          <img class="" src="./skiing.jpg" alt="" />
-        </div>
-        <div
-          class="w-[170px] rotate-12 rounded-xl overflow-hidden relative top-[0px] left-[90px] border-4 border-white"
-        >
-          <img class="" src="./beach.jpg" alt="" />
-        </div>
-        <div
-          class="w-[170px] rotate-6 rounded-xl overflow-hidden relative -top-[370px] left-[100px] border-4 border-white"
-        >
-          <img class="" src="./food.jpg" alt="" />
-        </div>
-        <div class="text-white text-center relative bottom-20">
-          <div class="text-xl font-bold">
-            <h2>Upload And Resize</h2>
-            <h2>Your Photos</h2>
+
+      <div class="flex justify-center items-center">
+        <div class="max-w-[360px]">
+          <div
+            class="w-[40%] -rotate-6 rounded-xl overflow-hidden relative top-[80px] left-[40px] border-4 border-white"
+          >
+            <img class="max-w-100%" src="./skiing.jpg" alt="" />
           </div>
-          <div class="text-[10px]">
-            <p>an easy way to crop any photo</p>
-            <p>of your choice...</p>
+          <div
+            class="w-[40%] rotate-12 rounded-xl overflow-hidden relative -top-[30px] left-[140px] border-4 border-white"
+          >
+            <img class="" src="./beach.jpg" alt="" />
+          </div>
+          <div
+            class="w-[40%] -rotate-12 rounded-xl overflow-hidden relative -top-[260px] left-[120px] border-4 border-white"
+          >
+            <img class="" src="./food.jpg" alt="" />
+          </div>
+          <div class="text-white text-center relative bottom-20">
+            <div class="text-xl font-bold">
+              <h2>Upload And Resize</h2>
+              <h2>Your Photos</h2>
+            </div>
+            <div class="text-[10px]">
+              <p>an easy way to resize any photo</p>
+              <p>of your choice...</p>
+            </div>
+
+            <button
+              class="mt-2 px-4 py-2 rounded-xl bg-orange-500 text-slate-300 hover:bg-slate-300 hover:text-orange-500 font-bold"
+            >
+              Let's Resize
+            </button>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="bg-blue-200 m-4">
+    <!-- <div class="bg-blue-200 m-4">
       <form
         action="/api/images"
         method="post"
@@ -65,6 +76,6 @@
           <button type="submit" class="">Submit</button>
         </div>
       </form>
-    </div>
+    </div> -->
   </body>
 </html>
