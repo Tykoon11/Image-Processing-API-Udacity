@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./output.css" />
+    <title>resize-photo</title>
+  </head>
+  <body class="bg-gradient-to-r from-[#00e4ad] to-blue-500">
+    <div
+      class="max-h-[100vh] min-h-[80vh] min-w-[80vw] bg-white my-[10vh] mx-[10vw] rounded-3xl border-2 border-white px-5"
+    >
+      <div class="mt-[150px] mb-7">
+        <div class="text-center text-xl font-bold text-[#2E67CD] mb-2">
+          <h2>Hello, Let's Begin!</h2>
+        </div>
+
+        <div class="text-[10px] text-center text-slate-400">
+          <p>Select and upload any photo of your choice</p>
+          <p>input desired width and height</p>
+          <p>select the resize button to proceed</p>
+        </div>
+      </div>
+
+      <div>
+        <div class="bg-red-200 py-6">
+          <form
+            action="/api/images"
+            method="post"
+            enctype="multipart/form-data"
+          >
+            <div class="flex justify-center px-10">
+              <input type="file" id="file" name="photo" accept="image/*" />
+              <!-- <label for="file">Upload</label> -->
+            </div>
+            <div class="flex justify-center mt-6">
+              <label for="width">Width</label>
+              <input id="width" name="width" type="text" />
+            </div>
+            <div class="flex justify-center mt-6">
+              <label for="height">Height</label>
+              <input id="height" name="height" type="text" />
+            </div>
+            <div class="flex justify-center mt-10">
+              <button
+                class="bg-[#2E67CD] px-20 py-2 text-slate-100 rounded-md text-sm"
+                type="submit"
+                class=""
+              >
+                Resize
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<!-- enctype="application/x-www-form-urlencoded" -->
+
+<!-- <div>
+          <label for="name">FileName</label>
+          <input id="name" name="filename" type="text" />
+            </div> -->

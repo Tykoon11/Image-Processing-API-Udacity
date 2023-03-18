@@ -7,12 +7,15 @@ const resize = async (filename: string, width: number, height: number) => {
   try {
     const inputImage = path.resolve(
       __dirname,
-      `../../assets/images/${filename}.jpg`
+      `../../assets/images/${filename}`
     )
     const outputImage = path.resolve(
       __dirname,
-      `../../assets/cropped/${filename}x${width}x${height}.jpg`
+      `../../assets/cropped/${filename}x${width}x${height}.${path.extname(
+        filename
+      )}`
     )
+
     console.log(inputImage)
     console.log(outputImage)
 
