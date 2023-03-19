@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./logo1.png" />
+    <link rel="stylesheet" href="./output.css" />
+    <title>resize-photo</title>
+  </head>
+  <body class="bg-gradient-to-r from-[#00e4ad] to-blue-500 md:bg-green-300">
+    <div
+      class="max-h-[100vh] min-h-[80vh] min-w-[80vw] my-[10vh] mx-[10vw] px-5 bg-white border-2 rounded-3xl border-white"
+    >
+      <div class="mt-[150px] mb-7">
+        <hr />
+        <div class="text-center text-xl font-bold text-[#2E67CD] mt-2 mb-2">
+          <h2><span class="text-[#00e4ad]">Hello,</span> Let's Begin!</h2>
+        </div>
+
+        <div class="text-[10px] text-center text-slate-400">
+          <p>Select and upload any photo of your choice</p>
+          <p>input desired width and height</p>
+          <p>select the resize button to proceed</p>
+        </div>
+      </div>
+
+      <div>
+        <div class="bg-slate-200 rounded-xl py-6 mb-7">
+          <form
+            action="/api/images"
+            method="post"
+            enctype="multipart/form-data"
+          >
+            <div class="flex justify-center px-10">
+              <input
+                class="text-sm"
+                type="file"
+                id="file"
+                name="photo"
+                accept="image/*"
+              />
+              <!-- <label for="file">Upload</label> -->
+            </div>
+            <div class="flex justify-center mt-6">
+              <label class="text-slate-500" for="width">Width</label>
+              <input
+                class="border-2 rounded-lg px-1 w-20 flex border-[#00e4ad] ml-2"
+                id="width"
+                name="width"
+                type="text"
+              />
+            </div>
+            <div class="flex justify-center mt-6">
+              <label class="text-slate-500" for="height">Height</label>
+              <input
+                class="border-2 rounded-lg px-1 w-20 flex border-[#00e4ad] ml-2"
+                id="height"
+                name="height"
+                type="text"
+              />
+            </div>
+            <div class="flex justify-center mt-10">
+              <button
+                class="bg-gradient-to-r from-[#00e4ad] to-blue-500 px-20 py-2 text-slate-100 rounded-2xl text-sm text-bold hover:text-orange-500"
+                type="submit"
+                class=""
+              >
+                Resize
+              </button>
+            </div>
+          </form>
+        </div>
+        <hr />
+      </div>
+    </div>
+  </body>
+</html>
