@@ -837,6 +837,10 @@ video {
   padding-left: 5rem;
 }
 
+.pl-28 {
+  padding-left: 7rem;
+}
+
 .text-center {
   text-align: center;
 }
@@ -892,6 +896,16 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-\[\#e45b00\] {
+  --tw-text-opacity: 1;
+  color: rgb(228 91 0 / var(--tw-text-opacity));
+}
+
+.text-slate-300 {
+  --tw-text-opacity: 1;
+  color: rgb(203 213 225 / var(--tw-text-opacity));
 }
 
 .opacity-100 {
