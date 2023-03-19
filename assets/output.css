@@ -912,4 +912,12 @@ video {
     padding-left: 10vw;
     padding-right: 10vw;
   }
+
+  .md\:pt-\[\] {
+    padding-top: ;
+  }
+
+  .md\:pt-\[10vh\] {
+    padding-top: 10vh;
+  }
 }
