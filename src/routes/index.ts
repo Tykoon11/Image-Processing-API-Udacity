@@ -25,7 +25,6 @@ routes.post(
       console.log(req.file)
 
       const filename = req.file?.originalname
-      console.log(`${filename} na em`)
       const width = Number(req.body.width)
       const height = Number(req.body.height)
 
