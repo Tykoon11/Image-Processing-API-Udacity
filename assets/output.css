@@ -838,6 +838,11 @@ video {
   color: rgb(46 103 205 / var(--tw-text-opacity));
 }
 
+.text-orange-600 {
+  --tw-text-opacity: 1;
+  color: rgb(234 88 12 / var(--tw-text-opacity));
+}
+
 .text-slate-100 {
   --tw-text-opacity: 1;
   color: rgb(241 245 249 / var(--tw-text-opacity));
@@ -911,10 +916,6 @@ video {
   .md\:px-\[10vw\] {
     padding-left: 10vw;
     padding-right: 10vw;
-  }
-
-  .md\:pt-\[\] {
-    padding-top: ;
   }
 
   .md\:pt-\[10vh\] {
