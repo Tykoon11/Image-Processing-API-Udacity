@@ -30,6 +30,7 @@ routes.post(
 
       const photo = await resize(filename as string, width, height)
       console.log("Rendering file")
+      res.download(photo as any)
       res.sendFile(photo as string)
     } catch {
       console.log(
